@@ -323,6 +323,14 @@ SPK Files
 
            NN        version number, starting from 01 (required; e.g. 01);
 
+      The naming scheme for the JUICE spacecraft internal components SPKs is:
+
+           juice_struct_internal_vNN.bsp
+
+      where
+
+           NN        version number, starting from 01 (required; e.g. 01);
+
 
    Naming Scheme for Generic Planetary Ephemeris SPKs
 
@@ -431,6 +439,18 @@ SPK Files
 
            NN       version (required; e.g. 01);
 
+
+   Naming Scheme for JUICE science frames origins SPKs
+
+      The naming scheme for JUICE Regions of Interest (ROI) SPKs is:
+
+           juice_roi_vNN.bsp
+
+      where
+
+           NN       version (required; e.g. 01);
+
+
 <a href="#Table of Contents" style="float: right;">Back to Table of Contents</a>
 <a name="PCK Files"></a>
 PCK Files
@@ -452,7 +472,7 @@ PCK Files
 
                     If multiple versions of a generic PCK Kernel file are
                     provided, always use the latest version (unless an
-                    earlier version is needed for some special reasons.)
+                    earlier version is needed for some special reasons).
 
       The naming scheme for generic PCK containing masses for Solar System
       bodies is:
@@ -466,6 +486,34 @@ PCK Files
                     If multiple versions of a generic PCK Kernel file are
                     provided, always use the latest version (unless an
                     earlier version is needed for some special reasons).
+
+      The naming scheme for generic PCK containing masses for Solar System
+      bodies corresponding to IMCCE INPOP19a Planetary Ephemeris is:
+
+           gm_inpop19a_vNN.tpc
+
+      where
+
+         NN       version number, starting from 01 (required; e.g. 01);
+
+                  If multiple versions of a JUICE mission-specific PCK
+                  Kernel file are provided, always use the latest version
+                  (unless an earlier version is needed for some special
+                  reasons).
+
+      The naming scheme for generic PCK containing masses for the inner Jovian
+      and Galilean moons corresponding to IMCCE NOE-5-2023 Ephemeris is:
+
+           gm_noe2023_vNN.tpc
+
+      where
+
+         NN       version number, starting from 01 (required; e.g. 01);
+
+                  If multiple versions of a JUICE mission-specific PCK
+                  Kernel file are provided, always use the latest version
+                  (unless an earlier version is needed for some special
+                  reasons).
 
 
    Naming Scheme for Earth high-precision PCKs
@@ -498,7 +546,7 @@ PCK Files
                   If multiple versions of a JUICE mission-specific PCK
                   Kernel file are provided, always use the latest version
                   (unless an earlier version is needed for some special
-                  reasons.)
+                  reasons).
 
 
    Naming Scheme for JUICE Regions of Interest (ROI) PCKs
@@ -514,7 +562,7 @@ PCK Files
                   If multiple versions of a JUICE mission-specific PCK
                   Kernel file are provided, always use the latest version
                   (unless an earlier version is needed for some special
-                  reasons.)
+                  reasons).
 
 
    Naming Scheme for Moon INPOP19a high-precision PCKs
@@ -530,7 +578,7 @@ PCK Files
                   If multiple versions of a JUICE mission-specific PCK
                   Kernel file are provided, always use the latest version
                   (unless an earlier version is needed for some special
-                  reasons.)
+                  reasons).
 
 <a href="#Table of Contents" style="float: right;">Back to Table of Contents</a>
 <a name="IK Files"></a>
@@ -567,7 +615,7 @@ IK Files
 
                     If multiple versions of an IK file are provided for an
                     instrument, always use the latest version (unless
-                    earlier version is needed for some special reasons.)
+                    earlier version is needed for some special reasons).
 
 <a href="#Table of Contents" style="float: right;">Back to Table of Contents</a>
 <a name="CK Files"></a>
@@ -642,7 +690,7 @@ CK Files
 
 
    If multiple versions of a C-Kernel file are provided, always use the latest
-   version (unless earlier version is needed for some special reasons.)
+   version (unless earlier version is needed for some special reasons).
 
 <a href="#Table of Contents" style="float: right;">Back to Table of Contents</a>
 <a name="LSK Files"></a>
@@ -661,7 +709,7 @@ LSK Files
 
                     If multiple versions of a generic LSK Kernel file are
                     provided, always use the latest version (unless earlier
-                    version is needed for some special reasons.)
+                    version is needed for some special reasons).
 
 <a href="#Table of Contents" style="float: right;">Back to Table of Contents</a>
 <a name="SCLK Files"></a>
@@ -735,10 +783,10 @@ FK Files
         earth_topo_YYMMDD.tf         NASA DSN Ground Stations topocentric
                                      frames.
 
-        juice_earthstns_v01.tf       JUICE specific Ground Stations
+        juice_stations_topo_vNN.tf   JUICE specific Ground Stations
                                      topocentric frames.
 
-        rssd0002.tf                  Cross-mission frames kernel that defines
+        rssd00NN.tf                  Cross-mission frames kernel that defines
                                      frames of interest not ``built'' in the
                                      SPICE toolkit.
 
@@ -778,6 +826,7 @@ DSK Files
          STRUC   instrument/structure/sensor identifier (optional):
 
                      bus:       for the spacecraft bus;
+                     fixed:     for spacecraft fixed parts;
                      gala:      for GALA instrument;
                      janus:     for JANUS instrument;
                      jmc1:      for JMC 1;
@@ -835,7 +884,7 @@ DSK Files
          NN      DSK version number -- 2 digits (required).
 
    If multiple versions of a DS-Kernel file are provided, always use the latest
-   version (unless earlier version is needed for some special reasons.)
+   version (unless earlier version is needed for some special reasons).
 
 <a href="#Table of Contents" style="float: right;">Back to Table of Contents</a>
 <a name="MK Files"></a>
